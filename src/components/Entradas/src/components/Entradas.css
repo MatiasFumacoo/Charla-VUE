@@ -1,0 +1,12 @@
+.Entradas {
+
+}
+
+.Entradas .jumbotron {
+  background-color: purple;
+  color: white;
+}
+
+.Entradas hr {
+    background-color: #ddd;
+}

@@ -1,0 +1,56 @@
+<div class="Entradas">
+  <div class="jumbotron">
+    <h2>Componente Entradas</h2>
+    <hr>
+    <hr>
+    <h3>Contador: {{mostrarContadorVuex}}</h3>
+    <hr>
+    <hr>
+
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <br>
+    <h4><u>Interpolación / v-text / v-html</u></h4>
+    <br>
+    <p>{{mensaje}}</p>
+    <p v-text="mensaje"></p>
+    <p v-html="mensaje"></p>
+    <hr>
+    <p>{{mensajeHTML}}</p>
+    <p v-text="mensajeHTML"></p>
+    <p v-html="mensajeHTML"></p>
+    <hr>
+
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <h4><u>Property Binding - v-bind</u></h4>
+    <input type="text" value="123"><br>
+    <input type="text" value="valor"><br>
+    <input type="text" v-bind:value="valor"> {{valor}}<br>
+    <input type="text" :value="valor"> {{valor}}<br>
+
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <hr>
+    <h4><u>Event Binding - v-on</u></h4>
+    <button class="btn btn-success m-3" v-on:click="contador++">Contar {{contador}}</button>
+    <button class="btn btn-success m-3" @click="contador2++">Contar {{contador2}}</button>
+    <button class="btn btn-success m-3" @click="incrementar()">Contar {{getContador()}}</button>
+
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
+    <hr>
+    <h4><u>Doble data Binding - v-model</u></h4>
+    <br>
+    <h5>Manual</h5>
+    <input type="text" :value="valor2" @input="actualizar($event)"> {{ valor2 }} <br>
+    <br>
+    <h5>Automatico</h5>
+    <input type="text" v-model="valor3"> {{ valor3 }} <br>
+
+  </div>
+</div>
